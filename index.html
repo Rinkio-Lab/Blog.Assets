@@ -1,16 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Assets - Music</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 2rem;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #f0f4ff, #e5f0ff);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #2a4e8a;
+            margin: 1rem auto 0;
+            border-radius: 2px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        li {
+            margin: 1.2rem 0;
+            animation: slideUp 0.6s ease forwards;
+            opacity: 0;
+        }
+
+        li:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        li:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        li:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            color: #2a4e8a;
+            text-decoration: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+            font-weight: 600;
+            transition: all 0.25s ease;
+        }
+
+        a:hover {
+            background-color: #dbeeff;
+            transform: translateY(-3px) scale(1.01);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+        }
+
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        footer a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+        }
+
+        /* Dark Mode 支持 */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(135deg, #1e1e2f, #2c2c3f);
+                color: #eee;
+            }
+
+            a {
+                background: rgba(46, 46, 64, 0.8);
+                color: #aad4ff;
+            }
+
+            a:hover {
+                background-color: #3b3b50;
+            }
+
+            footer {
+                color: #aaa;
+            }
+
+            footer a {
+                color: #88c6ff;
+            }
+
+            h1::after {
+                background: #88c6ff;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <h1>Welcome to Blog.Assets</h1>
     <ul>
-        <li><a href="music/OSHINKO.mp3">OSHINKO</a></li>
-        <li><a href="music/SORA_NO_HAKO.mp3">SORA_NO_HAKO</a></li>
-        <li><a href="music/ZATO_BOKURANOMACHI.mp3">ZATO_BOKURANOMACHI</a></li>
+        <li><a href="music/OSHINKO.mp3">🎵 おしんこ（吉野家的小曲）</a></li>
+        <li><a href="music/SORA_NO_HAKO.mp3">🎶 空の箱 (井芹仁菜、河原木桃香)</a></li>
+        <li><a href="music/ZATO_BOKURANOMACHI.mp3">🎼 雑踏、僕らの街</a></li>
     </ul>
+    <footer>
+        <a href="https://github.com/Rinkio-Lab/Rinkio-Lab.github.io" target="_blank">
+            © 2025 Rinkio's Blog. All rights reserved.
+        </a>
+    </footer>
 </body>
+
 </html>
